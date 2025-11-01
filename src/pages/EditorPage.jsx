@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { useEditor } from '../hooks/useEditor';
-import { useProjects } from '../hooks/useProjects';
-import { useResponsive } from '../hooks/useResponsive';
+import useEditor from '../hooks/useEditor';
+import useProjects from '../hooks/useProjects';
+import useResponsive from '../hooks/useResponsive';
 import { ROUTES } from '../config/routes';
 
 // Components

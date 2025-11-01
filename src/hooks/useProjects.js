@@ -28,26 +28,27 @@ const useProjects = () => {
   /**
    * Get initial projects for welcome page (3 rows)
    */
-  const getInitialProjects = useCallback(() => {
+    const getInitialProjects = useCallback(() => {
     return getRecentProjects(CONFIG.APP.MAX_PROJECTS_DISPLAY);
-  }, [getRecentProjects]);
+    }, [getRecentProjects]);
 
-  /**
-   * Load more projects (for show more functionality)
-   */
-  const [hasMore, setHasMore] = useCallback(() => {
+    /**
+     * Check if there are more projects to load
+     */
+    const hasMore = useCallback(() => {
     return projects.length > CONFIG.APP.MAX_PROJECTS_DISPLAY;
-  }, [projects]);
+    }, [projects]);
 
-  /**
-   * Get projects for display (initial or all)
-   */
-  const [displayProjects, setDisplayProjects] = useCallback((showAll = false) => {
+    /**
+     * Get projects for display (initial or all)
+     */
+    const getDisplayProjects = useCallback((showAll = false) => {
     if (showAll) {
-      return projects;
+        return projects;
     }
     return getInitialProjects();
-  }, [projects, getInitialProjects]);
+    }, [projects, getInitialProjects]);
+
 
   /**
    * Duplicate a project
@@ -154,13 +155,13 @@ const useProjects = () => {
     
     // Additional utilities
     getInitialProjects,
-    hasMore: projects.length > CONFIG.APP.MAX_PROJECTS_DISPLAY,
+    hasMore: hasMore(), // ✅ Call the function
     loadMore: () => projects,
     duplicateProject,
     getStats,
     exportProject,
     importProject,
-  };
+    };
 };
 
 export default useProjects;

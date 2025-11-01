@@ -1,5 +1,5 @@
 import React from 'react';
-import { useWelcomeMessage } from '../../hooks/useWelcomeMessage';
+import useWelcomeMessage from '../../hooks/useWelcomeMessage';
 import '../../styles/components/welcome.css';
 
 /**
