@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useProjects } from '../hooks/useProjects';
+import useProjects from '../hooks/useProjects';
 import { getNewEditorRoute } from '../config/routes';
 import { PROJECT_TYPES } from '../config/routes';
 

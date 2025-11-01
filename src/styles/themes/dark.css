@@ -1,0 +1,38 @@
+/**
+ * Dark Theme Overrides
+ * Additional dark theme specific styles
+ */
+
+@media (prefers-color-scheme: dark),
+[data-color-scheme="dark"] {
+  /* Additional dark theme customizations */
+  
+  /* Enhanced shadows for dark mode */
+  --shadow-elevated: 0 10px 40px rgba(0, 0, 0, 0.5);
+  
+  /* Specific component overrides */
+  --card-hover-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  
+  /* Code editor specific */
+  --editor-line-number-color: rgba(var(--color-gray-300-rgb), 0.5);
+  --editor-selection-bg: rgba(var(--color-primary-rgb), 0.25);
+  
+  /* Glassmorphism effect for dark mode */
+  --glass-bg: rgba(var(--color-charcoal-800-rgb), 0.8);
+  --glass-border: rgba(var(--color-gray-400-rgb), 0.1);
+}
+
+/* Dark theme specific animations */
+[data-color-scheme="dark"] .shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+}
+
+/* Dark theme glow effects */
+[data-color-scheme="dark"] .glow {
+  box-shadow: 0 0 20px rgba(var(--color-teal-300-rgb), 0.3);
+}

@@ -1,0 +1,105 @@
+/**
+ * Welcome Page Styles
+ * Styles for welcome page components
+ */
+
+/* Welcome Page Layout */
+.welcome-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome-main {
+  flex: 1;
+  padding: var(--space-32) 0;
+}
+
+/* New Project Section */
+.new-project-section {
+  margin-bottom: var(--space-32);
+  text-align: center;
+}
+
+.section-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  margin-bottom: var(--space-24);
+}
+
+.new-project-buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-16);
+  flex-wrap: wrap;
+}
+
+.new-project-btn {
+  min-width: 200px;
+}
+
+.btn-icon {
+  font-size: var(--font-size-xl);
+  margin-right: var(--space-8);
+}
+
+/* Recent Projects Section */
+.recent-projects-section {
+  margin-top: var(--space-32);
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: var(--space-32);
+  background-color: var(--color-surface);
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  margin-top: var(--space-24);
+}
+
+.empty-icon {
+  font-size: 64px;
+  margin-bottom: var(--space-16);
+  opacity: 0.5;
+}
+
+.empty-state h3 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-8);
+  color: var(--color-text);
+}
+
+.empty-state p {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* Error Message */
+.error-message {
+  padding: var(--space-16);
+  background-color: rgba(var(--color-error-rgb), 0.1);
+  border: 1px solid rgba(var(--color-error-rgb), 0.3);
+  border-radius: var(--radius-base);
+  color: var(--color-error);
+  text-align: center;
+  margin-top: var(--space-24);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .new-project-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .new-project-btn {
+    width: 100%;
+  }
+  
+  .section-title {
+    font-size: var(--font-size-xl);
+  }
+}
